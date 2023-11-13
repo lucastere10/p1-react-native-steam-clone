@@ -23,11 +23,8 @@ export const NavBar = () => {
             <View style={styles.containerMenus}>
                 <Text style={styles.textColor}>Menu</Text>
                 <Text style={styles.textColor}>Lista de Desejos</Text>
-                <Text style={styles.textColor}>Carteira (R$ 0,00)</Text>
+                <Text style={styles.textColor}>Carteira <Text style={styles.textColorBlue}>(R$ 0,00)</Text></Text>
             </View>
         </>
-
-
-
     );
 };

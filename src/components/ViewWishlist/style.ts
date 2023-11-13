@@ -8,6 +8,13 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 16,
         gap: 16
     },
+    containerCol: {
+        backgroundColor: '#1B2838',
+        flexDirection: "column",
+        alignItems: "flex-start",
+        paddingHorizontal: 16,
+        gap: 16
+    },
     textColor: {
         color: '#FCFFFF',
         fontWeight: 'bold',
@@ -45,6 +52,11 @@ export const styles = StyleSheet.create({
     ButtonText: {
         fontSize: 12,
         color: "#FCFFFF",
+        alignSelf: "center",
+    },
+    ButtonTextBlue: {
+        fontSize: 12,
+        color: "#2F85C4",
         alignSelf: "center",
     }
 });

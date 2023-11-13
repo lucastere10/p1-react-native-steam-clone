@@ -23,6 +23,12 @@ export const styles = StyleSheet.create({
        fontSize: 18,
        alignSelf:'center',
     },
+    textColorBlue: {
+      color: '#2F85C4',
+      fontWeight: 'bold',
+      fontSize: 18,
+      alignSelf:'center',
+   },
     image: {
       height: 24,
       width: 24,

@@ -1,6 +1,30 @@
-import { ImageBackground, View, Text, Image, TextInput, FlatList, Button, TouchableOpacity  } from "react-native";
+import { ImageBackground, View, Text, Image, TextInput, FlatList, Button, TouchableOpacity } from "react-native";
 import { styles } from "./style";
 import { CardWishlist } from "../CardWishlist";
+
+const jogos = [
+    {
+        nome: 'Stellaris',
+        preco: 'R$107,99',
+        avaliacao: 'MUITO POSITIVAS'
+    },
+    {
+        nome: 'Hearts of Iron IV',
+        preco: 'R$107,99',
+        avaliacao: 'MUITO POSITIVAS'
+    },
+    {
+        nome: 'Dead Cells',
+        preco: 'R$47,49',
+        avaliacao: 'EXTREMAMENTE POSITIVAS'
+    },
+    {
+        nome: 'Eastward',
+        preco: 'R$73,99',
+        avaliacao: 'MUITO POSITIVAS'
+    },
+
+]
 
 export const ViewWishlist = () => {
     return (
@@ -14,18 +38,25 @@ export const ViewWishlist = () => {
             </View>
             <View style={styles.container}>
                 <TouchableOpacity style={styles.ButtonContainer}>
-                    <Text style={styles.ButtonText} >Opções</Text>
+                    <Text style={styles.ButtonText}>Opções</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.ButtonContainer}>
-                    <Text style={styles.ButtonText} >Ordenar por: Posições personalizadas</Text>
+                    <Text style={styles.ButtonTextBlue}>
+                        Ordenar por:
+                        <Text style={styles.ButtonText}>  Posições personalizadas</Text>
+                    </Text>
                 </TouchableOpacity>
             </View>
-            <View style={styles.container}>
-                <CardWishlist /> 
+            <View style={styles.containerCol}>
+                {jogos.map((jogo) => (
+                    <CardWishlist
+                        key={jogo.nome}
+                        nome={jogo.nome}
+                        preco={jogo.preco}
+                        avaliacao={jogo.avaliacao}
+                    />
+                ))}
             </View>
         </>
-
-
-
     );
 };
