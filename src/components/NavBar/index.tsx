@@ -1,4 +1,4 @@
-import { ImageBackground, View, Text, Image, TextInput } from "react-native";
+import { ImageBackground, View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./style";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { AntDesign, MaterialIcons, Entypo, FontAwesome5 } from '@expo/vector-icons';
@@ -35,9 +35,15 @@ export const NavBar = () => {
                 ></Image>
             </View>
             <View style={styles.containerMenus}>
-                <Text style={styles.textColor}>Menu</Text>
-                <Text style={styles.textColor}>Lista de Desejos</Text>
-                <Text style={styles.textColor}>Carteira <Text style={styles.textColorBlue}>(R$ 0,00)</Text></Text>
+                <TouchableOpacity>
+                    <Text style={styles.textColor}>Menu</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.textColor}>Lista de Desejos</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={styles.textColor}>Carteira <Text style={styles.textColorBlue}>(R$ 0,00)</Text></Text>
+                </TouchableOpacity>
             </View>
         </>
     );

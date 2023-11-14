@@ -27,9 +27,11 @@ export const CardWishlist: React.FC<{ nome: string; preco: string; avaliacao: st
                 <View>
                     <View style={styles.containerPrice}>
                         <Text style={styles.textPrice}>{props.preco}</Text>
-                        <View style={styles.containerCart}>
-                            <MaterialCommunityIcons name="cart-variant" size={20} color="#FCFFFF" />
-                        </View>
+                        <TouchableOpacity>
+                            <View style={styles.containerCart}>
+                                <MaterialCommunityIcons name="cart-variant" size={20} color="#FCFFFF" />
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
