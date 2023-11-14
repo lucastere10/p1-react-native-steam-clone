@@ -3,7 +3,7 @@ import { styles } from "./style";
 import { AntDesign, FontAwesome5, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { Navigation } from 'react-native-navigation';
 
-export const CardWishlist: React.FC<{ nome: string; preco: string; avaliacao: string }> = (props) => {
+export default function CardWishlist({ item: {nome, preco, avaliacao} }) {
     return (
         <>
             <View style={styles.container}>
@@ -15,10 +15,10 @@ export const CardWishlist: React.FC<{ nome: string; preco: string; avaliacao: st
                 </View>
                 <View style={styles.containerColumn}>
                     <View>
-                        <Text style={styles.textColor}>{props.nome}</Text>
+                        <Text style={styles.textColor}>{nome}</Text>
                     </View>
                     <View>
-                        <Text style={styles.textGrade}>{props.avaliacao}</Text>
+                        <Text style={styles.textGrade}>{avaliacao}</Text>
                     </View>
                     <View>
                         <Text style={styles.textRemove}>remover</Text>
@@ -26,7 +26,7 @@ export const CardWishlist: React.FC<{ nome: string; preco: string; avaliacao: st
                 </View>
                 <View>
                     <View style={styles.containerPrice}>
-                        <Text style={styles.textPrice}>{props.preco}</Text>
+                        <Text style={styles.textPrice}>{preco}</Text>
                         <TouchableOpacity>
                             <View style={styles.containerCart}>
                                 <MaterialCommunityIcons name="cart-variant" size={20} color="#FCFFFF" />

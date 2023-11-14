@@ -12,14 +12,12 @@ export const styles = StyleSheet.create({
     paddingVertical: 8
   },
   containerColumn: {
-    flex: 0,
     flexDirection: "column",
     alignItems: 'flex-start',
     gap: 6,
     padding: 4
   },
   containerPrice: {
-    flex: 0,
     backgroundColor: '#303E4B',
     flexDirection: "row",
     alignItems: 'center',
@@ -28,7 +26,6 @@ export const styles = StyleSheet.create({
     gap: 8
   },
   containerCart: {
-    flex: 0,
     backgroundColor: '#73AD22',
     flexDirection: "row",
     alignItems: 'flex-start',

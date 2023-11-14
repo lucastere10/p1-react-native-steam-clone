@@ -1,7 +1,8 @@
 import { ImageBackground, View, Text, Image, TextInput, FlatList, Button, TouchableOpacity } from "react-native";
 import { styles } from "./style";
-import { CardWishlist } from "../CardWishlist";
+import CardWishlist from "../CardWishlist";
 
+const gap = 8
 const jogos = [
     {
         nome: 'Stellaris',
@@ -23,15 +24,40 @@ const jogos = [
         preco: 'R$73,99',
         avaliacao: 'MUITO POSITIVAS'
     },
+    {
+        nome: 'Cities: Skylines II',
+        preco: 'R$199,99',
+        avaliacao: 'NEUTRAS'
+    },
+    {
+        nome: 'Company of Heroes 3',
+        preco: 'R$299,90',
+        avaliacao: 'NEUTRAS'
+    },
+    {
+        nome: 'Slay the Spire',
+        preco: 'R$74,99',
+        avaliacao: 'EXTREMAMENTE POSITIVAS'
+    },
+    {
+        nome: 'Hollow Knight: Silksong',
+        preco: 'Em Breve',
+        avaliacao: 'NENHUMA ANÁLISE DE USUÁRIO'
+    },    
+    {
+        nome: 'Hades',
+        preco: 'R$73,99',
+        avaliacao: 'MUITO POSITIVAS'
+    },
 
 ]
 
 export const ViewWishlist = () => {
     return (
-        <>
+        <View style={{flex:1}}>
             <View style={styles.container}>
                 <Image style={styles.avatar} source={require('../../assets/avatar.png')}></Image>
-                <Text style={[styles.textColor, {width:'75%'}]}>LISTA DE DESEJOS DE HETERO POP</Text>
+                <Text style={[styles.textColor, { width: '75%' }]}>LISTA DE DESEJOS DE HETERO POP</Text>
             </View>
             <View style={styles.container}>
                 <TextInput placeholder="Buscar por nome ou marcador" style={styles.input} placeholderTextColor={'#748191'}>Teste</TextInput>
@@ -53,19 +79,18 @@ export const ViewWishlist = () => {
                 borderColor: '#3D444E',
                 width: '93%',
                 alignSelf: 'center',
-                marginVertical:3
-                }}>
+                marginVertical: 3
+            }}>
             </View>
-            <View style={styles.containerCol}>
-                {jogos.map((jogo) => (
-                    <CardWishlist
-                        key={jogo.nome}
-                        nome={jogo.nome}
-                        preco={jogo.preco}
-                        avaliacao={jogo.avaliacao}
-                    />
-                ))}
+            <View style={[styles.containerCol, {flex: 1, width: '100%'}]}>
+                <FlatList
+                    contentContainerStyle={{ gap }}
+                    data={jogos}
+                    renderItem={({ item }) => <CardWishlist item={item} />}
+                    keyExtractor={item => item.nome}
+                    ListFooterComponent={<View style={{height: 150}}/>}
+                />
             </View>
-        </>
+        </View>
     );
 };

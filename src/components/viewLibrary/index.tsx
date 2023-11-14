@@ -5,16 +5,16 @@ import { AntDesign, MaterialIcons, Entypo, FontAwesome5 } from '@expo/vector-ico
 const gap = 10
 const jogos = [
     {
-        nome: 'Age of Decadence',
-        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/230070/library_600x900.jpg',
+        nome: 'Hollow Knight',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/367520/library_600x900.jpg',
     },
     {
         nome: 'Age of Empires II',
         uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/221380/library_600x900.jpg',
     },
     {
-        nome: 'Age of Empires III DE',
-        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/933110/library_600x900.jpg',
+        nome: 'Resident Evil 2',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/883710/library_600x900.jpg',
     },
     {
         nome: 'Age of Empires III CC',
@@ -39,6 +39,30 @@ const jogos = [
     {
         nome: 'Banished',
         uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/242920/library_600x900.jpg',
+    },
+    {
+        nome: 'Rust',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/252490/library_600x900.jpg',
+    },
+    {
+        nome: 'Rome II Total War',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/214950/library_600x900.jpg',
+    },
+    {
+        nome: 'Eternal Return',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1049590/library_600x900.jpg',
+    },
+    {
+        nome: 'Darkest Dungeon',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/library_600x900.jpg',
+    },
+    {
+        nome: 'Stardew Valley',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg',
+    },
+    {
+        nome: 'Project Zomboid',
+        uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/108600/library_600x900.jpg',
     },
 ]
 
@@ -75,6 +99,7 @@ export const ViewLibrary = () => {
                     data={jogos}
                     renderItem={({ item }) => <CardWishlist uri={item.uri} />}
                     keyExtractor={item => item.nome}
+                    ListFooterComponent={<View style={{height: 260}}/>}
                 />
             </View>
         </>

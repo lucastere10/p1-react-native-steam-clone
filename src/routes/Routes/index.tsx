@@ -1,4 +1,4 @@
-import { Image } from "react-native";
+import { Image, View } from "react-native";
 import { Wishlist } from "../../screens/steamWishlist";
 import { Library } from "../../screens/steamLibrary";
 import { Auth } from "../../screens/steamAuth";
@@ -25,34 +25,44 @@ export const TabRoutes = () => {
                 screenOptions={{
                     tabBarShowLabel: false,
                     headerShown: false,
-                    // tabBarBackground: () => {
-                    //     return (
-                    //         <MaterialIcons name="keyboard-arrow-down" size={22} color="#FCFFFF" />
-                    //     );
-                    // },
-                    tabBarInactiveBackgroundColor: "##5C5FB250",
                     tabBarStyle: {
                         backgroundColor: "#202126",
-                        // paddingTop: 4.5, paddingBottom: 8 
+                        height: 75,
                     },
-                    tabBarActiveTintColor: "#DD8EEA",
-                    tabBarInactiveTintColor: "#DD8EEA80",
                 }}>
                 <Tab.Screen
                     name="Wishlist"
                     component={Wishlist}
                     options={{
-                        tabBarIcon: () => (
-                            <AntDesign name="tag" size={22} color="#FCFFFF" />
-                        ),
+                        tabBarIcon: ({ focused }) => (
+                            <View style={{
+                                height: 75,
+                                width: 50, 
+                                justifyContent: "center",
+                                alignItems: "center",
+                                borderTopWidth: focused ? 4 : 0,
+                                borderTopColor: "#1A9FFE"
+                            }}>
+                                <AntDesign name="tag" size={22} color={focused ? "#1A9FFE" : "#E1E2E6"} />
+                            </View>
+                        )
                     }}
                 />
                 <Tab.Screen
                     name="Library"
                     component={Library}
                     options={{
-                        tabBarIcon: () => (
-                            <AntDesign name="idcard" size={22} color="#FCFFFF" />
+                        tabBarIcon: ({ focused }) => (
+                            <View style={{
+                                height: 75,
+                                width: 50, 
+                                justifyContent: "center",
+                                alignItems: "center",
+                                borderTopWidth: focused ? 4 : 0,
+                                borderTopColor: "#1A9FFE"
+                            }}>
+                                <AntDesign name="idcard" size={22} color={focused ? "#1A9FFE" : "#E1E2E6"} />
+                            </View>
                         ),
                     }}
 
@@ -61,19 +71,35 @@ export const TabRoutes = () => {
                     name="Auth"
                     component={Auth}
                     options={{
-                        tabBarIcon: () => (
-                            <MaterialCommunityIcons name="shield" size={22} color="#FCFFFF" />
+                        tabBarIcon: ({ focused }) => (
+                            <View style={{
+                                height: 75,
+                                width: 50, 
+                                justifyContent: "center",
+                                alignItems: "center",
+                                borderTopWidth: focused ? 4 : 0,
+                                borderTopColor: "#1A9FFE"
+                            }}>
+                                <MaterialCommunityIcons name="shield" size={22} color={focused ? "#1A9FFE" : "#E1E2E6"} />
+                            </View>
                         ),
                     }}
-
                 />
                 <Tab.Screen
                     name="Notification"
                     component={Notification}
                     options={{
-                        tabBarIcon: () => (
-                            <FontAwesome5 name="bell" size={22} color="#FCFFFF" />
-                        ),
+                        tabBarIcon: ({ focused }) => (
+                            <View style={{
+                                height: 75,
+                                width: 50, 
+                                justifyContent: "center",
+                                alignItems: "center",
+                                borderTopWidth: focused ? 4 : 0,
+                                borderTopColor: "#1A9FFE"
+                            }}>
+                                <FontAwesome5 name="bell" size={22} color={focused ? "#1A9FFE" : "#E1E2E6"} />
+                            </View>),
                     }}
 
                 />
@@ -81,8 +107,18 @@ export const TabRoutes = () => {
                     name="Menu"
                     component={Menu}
                     options={{
-                        tabBarIcon: () => (
-                            <Entypo name="menu" size={22} color="#FCFFFF" />
+                        tabBarIcon: ({ focused }) => (
+                            <View style={{
+                                height: 75,
+                                width: 50, 
+                                justifyContent: "center",
+                                alignItems: "center",
+                                borderTopWidth: focused ? 4 : 0,
+                                borderTopColor: "#1A9FFE"
+                            }}>
+                                <Entypo name="menu" size={36} color={focused ? "#1A9FFE" : "#E1E2E6"} />
+                            </View>
+
                         ),
                     }}
 
