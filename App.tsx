@@ -1,14 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Wishlist } from './src/screens/steamWishlist';
+import { TabRoutes } from './src/routes/Routes';
+
+
 
 export default function App() {
   return (
     <>
       <StatusBar
-        style={"auto"}
+        style={"inverted"}
       />
-      <Wishlist />
+      {/* <Wishlist />
+      <Library /> */}
+      <TabRoutes />
     </>
+    
   )
 };

@@ -1,14 +1,16 @@
-import { ImageBackground, View, Text, Image, TextInput, FlatList, Button, TouchableOpacity  } from "react-native";
+import { ImageBackground, View, Text, Image, TextInput, FlatList, Button, TouchableOpacity } from "react-native";
 import { styles } from "./style";
+import { AntDesign, FontAwesome5, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Navigation } from 'react-native-navigation';
 
 export const CardWishlist: React.FC<{ nome: string; preco: string; avaliacao: string }> = (props) => {
     return (
         <>
             <View style={styles.container}>
-                <View style={{flexDirection:'column', alignItems:'center', gap:1}}>
-                    <Image style={styles.imageIcons} source={require('../../assets/arrowCima.png')}></Image>
-                    <Image style={styles.image} source={require('../../assets/menu.png')}></Image>
-                    <Image style={styles.imageIcons} source={require('../../assets/arrowBaixo.png')}></Image>
+                <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+                    <MaterialIcons name="keyboard-arrow-up" size={24} color="#748191" />
+                    <AntDesign name="bars" size={28} color="#748191" />
+                    <MaterialIcons name="keyboard-arrow-down" size={24} color="#748191" />
                     <Text style={styles.textRemove}>6</Text>
                 </View>
                 <View style={styles.containerColumn}>
@@ -26,7 +28,7 @@ export const CardWishlist: React.FC<{ nome: string; preco: string; avaliacao: st
                     <View style={styles.containerPrice}>
                         <Text style={styles.textPrice}>{props.preco}</Text>
                         <View style={styles.containerCart}>
-                            <Image style={styles.imageCart} source={require('../../assets/cart.png')}></Image>
+                            <MaterialCommunityIcons name="cart-variant" size={20} color="#FCFFFF" />
                         </View>
                     </View>
                 </View>

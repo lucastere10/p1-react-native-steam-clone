@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
        flex: 0,
        flexDirection: "row",
        alignItems: "center",
-       gap: 8,
+       gap: 2,
     },
     containerMenus: {
       backgroundColor: '#202126',
@@ -32,7 +32,6 @@ export const styles = StyleSheet.create({
     image: {
       height: 24,
       width: 24,
-      rotation: 90,
     },
     avatar: {
       height: 48,
@@ -40,11 +39,12 @@ export const styles = StyleSheet.create({
       justifyContent: 'center'
     },
     input: {
-      width: '50%',
-      height: 48,
+      width: '55%',
+      height: 44,
       backgroundColor: '#292C33',
       color: '#FCFFFF',
       padding: 10,
+      paddingLeft: 38,
       margin: 12,
       borderWidth: 0,
     }

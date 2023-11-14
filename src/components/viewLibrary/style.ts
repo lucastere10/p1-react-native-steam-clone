@@ -2,23 +2,28 @@ import { StatusBar, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#1B2838',
         flexDirection: "row",
         alignItems: "center",
         paddingHorizontal: 16,
-        gap: 16,
+        gap: 16
     },
     containerCol: {
-        backgroundColor: '#1B2838',
         flexDirection: "column",
         alignItems: "flex-start",
         paddingHorizontal: 16,
         gap: 16
     },
+    containerList: {
+        flexDirection: "row",
+        flexWrap:'wrap',
+        marginTop: 12,
+        alignItems: "flex-start",     
+        marginHorizontal: 9,
+        gap:2
+    },
     textColor: {
-        color: '#FCFFFF',
-        fontWeight: 'bold',
-        fontSize: 28,
+        color: '#90939C',
+        fontSize: 16,
         alignSelf: 'center'
     },
     avatar: {
@@ -28,14 +33,12 @@ export const styles = StyleSheet.create({
     },
     input: {
         width: '100%',
-        height: 36,
-        backgroundColor: '#182432',
+        height: 44,
+        backgroundColor: '#343843',
         color: '#FCFFFF',
         padding: 10,
-        marginTop: 16,
         marginBottom: 8,
-        borderWidth: 1,
-        borderRadius: 6
+        borderRadius: 2
     },
     lineStyle: {
         borderWidth: 0.5,
@@ -43,16 +46,21 @@ export const styles = StyleSheet.create({
         margin: 10,
     },
     ButtonContainer: {
+        flex:0,
+        flexDirection:'row',
         elevation: 8,
-        backgroundColor: "#3D444E",
+        backgroundColor: "#1997FE",
         borderRadius: 4,
         paddingVertical: 8,
-        paddingHorizontal: 10
+        paddingHorizontal: 5,
+        width:'60%',
+        justifyContent:'space-between',
+        alignContent:'center'
     },
     ButtonText: {
-        fontSize: 12,
+        fontSize: 16,
         color: "#FCFFFF",
-        alignSelf: "center",
+        fontWeight:'bold'
     },
     ButtonTextBlue: {
         fontSize: 12,

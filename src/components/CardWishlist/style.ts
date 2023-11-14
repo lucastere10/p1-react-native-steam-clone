@@ -3,7 +3,6 @@ import { StatusBar, StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: '#3D4D5D',
-    flex: 0,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: 'space-between',
@@ -51,7 +50,7 @@ export const styles = StyleSheet.create({
   textRemove: {
     color: '#748191',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 12,
     alignSelf: 'center',
     textDecorationLine: 'underline'
   },
@@ -63,11 +62,6 @@ export const styles = StyleSheet.create({
   image: {
     height: 24,
     width: 24,
-    rotation: 90,
-  },
-  imageCart: {
-    height: 20,
-    width: 20,
   },
   imageIcons: {
     height: 12,
